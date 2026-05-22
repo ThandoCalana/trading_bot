@@ -3,12 +3,12 @@ import utils
 
 class Instrument:
     def __init__(self, ob):
-        self.name = ob['name']
+        self.name = ob['name'] # EUR_USD
         self.instr_type = ob['type']
         self.displayName = ob['displayName']
         self.pipLocation = pow(10, ob['pipLocation'])
         self.marginRate = ob['marginRate']
-
+    
     def __repr__(self):
         return str(vars(self))
     
@@ -24,3 +24,4 @@ class Instrument:
     
 if __name__ == "__main__":
     print(Instrument.get_instruments_list())
+
